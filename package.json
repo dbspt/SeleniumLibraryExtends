@@ -1,0 +1,32 @@
+{
+  "name": "seleniumlibraryextends",
+  "version": "0.0.0",
+  "description": "Selenium library keyword extension to support Behavior Driven Development",
+  "main": "index.js",
+  "scripts": {
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbspt/SeleniumLibraryExtends.git"
+  },
+  "keywords": ["Robot Framework, Selenium Library"],
+  "author": {
+    "name": "Cléverson Sampaio",
+    "email": "cleverson@sampaio.dev.br"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbspt/SeleniumLibraryExtends/issues"
+  },
+  "homepage": "https://github.com/dbspt/SeleniumLibraryExtends#readme",
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
