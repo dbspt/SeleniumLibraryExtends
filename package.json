@@ -4,7 +4,9 @@
   "description": "Selenium library keyword extension to support Behavior Driven Development",
   "main": "index.js",
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "install": "python setup.py install",
+    "uninstall": "pip uninstall seleniumlibraryextends -y"
   },
   "repository": {
     "type": "git",
