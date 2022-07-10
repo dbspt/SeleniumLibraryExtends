@@ -4,8 +4,11 @@
 # Copyright (c) 2022 Cléverson Sampaio <cleverson@sampaio.dev.br>
 
 from SeleniumLibraryExtends.version import VERSION
+from SeleniumLibraryExtends.Navigation.navigation import Navigation
 
-class SeleniumLibraryExtends():
+class SeleniumLibraryExtends(
+    Navigation
+):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = VERSION
 
