@@ -16,7 +16,7 @@ setup(
     # Inclui todos os outros arquivos que estão dentro da pasta do seu projeto
     include_package_data = True,
     # Nome do seu pacote
-    name = 'SeleniumLibraryExtends',
+    name = 'robotframework-seleniumlibraryextends',
     # Versão do projeto
     version = VERSION,
     # Descrição do seu pacote
@@ -32,7 +32,7 @@ setup(
     # Diretório do seu pacote
     package_dir = {'': 'src'},
     # Dependências/outros módulos necessários para o seu pacote funcionar
-    install_requires = ['robotframework', 'robotframework-seleniumlibrary', 'webdriver-manager'],
+    install_requires = ['robotframework', 'selenium==3.141.0', 'robotframework-seleniumlibrary==4.5.0', 'webdriver-manager'],
     # Descrição detalhada do seu pacote
     long_description = 'Selenium library keyword extension to support Behavior Driven Development',
     # Formato da sua descrição detalhada
