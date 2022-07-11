@@ -17,7 +17,7 @@ class FindElements:
         self.driver = BuiltIn().get_library_instance("SeleniumLibrary")
         try:
             self.driver.wait_until_element_is_visible(locator)
-            Highlight.init(locator)
+            Highlight().init(locator)
         except Exception as e:
             Report().fail(e)
 
