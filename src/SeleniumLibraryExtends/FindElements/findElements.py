@@ -6,6 +6,7 @@
 from robot.libraries.BuiltIn import BuiltIn
 from robot.api.deco import keyword
 from SeleniumLibraryExtends.report import Report
+from SeleniumLibraryExtends.highlight import Highlight
 
 class FindElements:
     def __init__(self):
@@ -16,6 +17,7 @@ class FindElements:
         self.driver = BuiltIn().get_library_instance("SeleniumLibrary")
         try:
             self.driver.wait_until_element_is_visible(locator)
+            Highlight.init(locator)
         except Exception as e:
             Report().fail(e)
 
