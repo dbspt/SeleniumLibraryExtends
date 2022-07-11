@@ -40,7 +40,7 @@ setup(
     # Classificadores permitem que seu pacote seja categorizado com base na funcionalidade
     # Pode ser encontrado em https://pypi.org/classifiers
     classifiers = [
-        "Development Status :: 1 - Planning",
+        "Development Status :: 5 - Production/Stable",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",

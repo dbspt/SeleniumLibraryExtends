@@ -3,4 +3,4 @@
 #
 # Copyright (c) 2022 Cléverson Sampaio <cleverson@sampaio.dev.br>
 
-VERSION = '0.0.0'
+VERSION = '1.0.0'
