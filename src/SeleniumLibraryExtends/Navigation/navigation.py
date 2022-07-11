@@ -7,6 +7,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from robot.api.deco import keyword
 from SeleniumLibraryExtends.report import Report
 from SeleniumLibraryExtends.browser import Browser
+from SeleniumLibraryExtends.FindElements.findElements import FindElements
 
 class Navigation:
     def __init__(self):
@@ -24,7 +25,7 @@ class Navigation:
         self.driver = BuiltIn().get_library_instance("SeleniumLibrary")
         self.driver.go_to(url)
         try:
-            self.driver.wait_until_element_is_visible("tag:body")
+            FindElements().waitForElementVisible("tag:body")
         except Exception as e:
             Report().fail(e)
 
