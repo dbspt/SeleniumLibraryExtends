@@ -1,19 +1,19 @@
 {
   "name": "seleniumlibraryextends",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Selenium library keyword extension to support Behavior Driven Development",
   "main": "index.js",
   "scripts": {
     "commit": "cz",
     "install": "python setup.py install",
-    "uninstall": "pip uninstall seleniumlibraryextends -y",
+    "uninstall": "pip uninstall robotframework-seleniumlibraryextends -y",
     "build": "npm run uninstall && npm run install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dbspt/SeleniumLibraryExtends.git"
   },
-  "keywords": ["Robot Framework, Selenium Library"],
+  "keywords": ["robotframework", "seleniumlibrary"],
   "author": {
     "name": "Cléverson Sampaio",
     "email": "cleverson@sampaio.dev.br"
