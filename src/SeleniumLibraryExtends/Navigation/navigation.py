@@ -6,6 +6,7 @@
 from robot.libraries.BuiltIn import BuiltIn
 from robot.api.deco import keyword
 from SeleniumLibraryExtends.report import Report
+from SeleniumLibraryExtends.browser import Browser
 
 class Navigation:
     def __init__(self):
@@ -14,7 +15,7 @@ class Navigation:
     @keyword("I open the browser ${browser}")
     def openBrowser(self, browser: str, maximize: bool = True):
         self.driver = BuiltIn().get_library_instance("SeleniumLibrary")
-        self.driver.open_browser("about:blank", browser)
+        self.driver.open_browser("about:blank", browser, None, None, None, None, None, None, Browser().path(browser))
         if maximize:
             self.driver.maximize_browser_window()
 

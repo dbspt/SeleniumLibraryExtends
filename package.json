@@ -6,7 +6,8 @@
   "scripts": {
     "commit": "cz",
     "install": "python setup.py install",
-    "uninstall": "pip uninstall seleniumlibraryextends -y"
+    "uninstall": "pip uninstall seleniumlibraryextends -y",
+    "build": "npm run uninstall && npm run install"
   },
   "repository": {
     "type": "git",
