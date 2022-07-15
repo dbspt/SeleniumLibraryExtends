@@ -5,15 +5,21 @@
   "main": "index.js",
   "scripts": {
     "commit": "cz",
-    "install": "python setup.py install",
-    "uninstall": "pip uninstall robotframework-seleniumlibraryextends -y",
-    "build": "npm run uninstall && npm run install"
+    "install_library": "python setup.py install",
+    "package_library": "python setup.py sdist bdist_wheel",
+    "uninstall_library": "pip uninstall robotframework-seleniumlibraryextends -y",
+    "clean": "rimraf build dist results src/robotframework_seleniumlibraryextends.egg-info",
+    "build_prod": "npm run clean && npm run uninstall_library && npm run package_library",
+    "build_dev": "npm run clean && npm run uninstall_library && npm run install_library"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dbspt/SeleniumLibraryExtends.git"
   },
-  "keywords": ["robotframework", "seleniumlibrary"],
+  "keywords": [
+    "robotframework",
+    "seleniumlibrary"
+  ],
   "author": {
     "name": "Cléverson Sampaio",
     "email": "cleverson@sampaio.dev.br"
@@ -25,7 +31,8 @@
   "homepage": "https://github.com/dbspt/SeleniumLibraryExtends#readme",
   "devDependencies": {
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "rimraf": "^3.0.2"
   },
   "config": {
     "commitizen": {
