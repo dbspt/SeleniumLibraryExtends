@@ -7,9 +7,10 @@
     "commit": "cz",
     "install_library": "python setup.py install",
     "package_library": "python setup.py sdist bdist_wheel",
-    "uninstall_library": "pip uninstall robotframework-seleniumlibraryextends -y",
+    "freeze": "pip freeze > uninstall.txt",
+    "uninstall_library": "npm run freeze && pip uninstall -r uninstall.txt -y",
     "clean": "rimraf build dist results src/robotframework_seleniumlibraryextends.egg-info",
-    "build_prod": "npm run clean && npm run uninstall_library && npm run package_library",
+    "build_prod": "npm run clean && npm run package_library",
     "build_dev": "npm run clean && npm run uninstall_library && npm run install_library"
   },
   "repository": {

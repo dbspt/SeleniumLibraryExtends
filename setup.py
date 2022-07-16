@@ -9,8 +9,14 @@ from setuptools import setup, find_packages
 
 CURDIR = dirname(abspath(__file__))
 
-with open(join(CURDIR, 'src', 'SeleniumLibraryExtends', 'version.py')) as f:
+with open(join(CURDIR, 'src', 'SeleniumLibraryExtends', 'version.py'), encoding="utf8") as f:
     VERSION = re.search("\nVERSION = '(.*)'", f.read()).group(1)
+
+with open(join(CURDIR, 'README.md'), encoding="utf8") as f:
+    DESCRIPTION = f.read()
+
+with open(join(CURDIR, 'requirements.txt'), encoding="utf8") as f:
+    REQUIREMENTS = f.read().splitlines()
 
 setup(
     # Inclui todos os outros arquivos que estão dentro da pasta do seu projeto
@@ -32,9 +38,9 @@ setup(
     # Diretório do seu pacote
     package_dir = {'': 'src'},
     # Dependências/outros módulos necessários para o seu pacote funcionar
-    install_requires = ['robotframework', 'robotframework-seleniumlibrary'],
+    install_requires = REQUIREMENTS,
     # Descrição detalhada do seu pacote
-    long_description = 'Selenium library keyword extension to support Behavior Driven Development',
+    long_description = DESCRIPTION,
     # Formato da sua descrição detalhada
     long_description_content_type = "text/markdown",
     # Classificadores permitem que seu pacote seja categorizado com base na funcionalidade
