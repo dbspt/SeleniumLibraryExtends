@@ -7,12 +7,14 @@ from SeleniumLibraryExtends.version import VERSION
 from SeleniumLibraryExtends.Navigation.navigation import Navigation
 from SeleniumLibraryExtends.ElementInteraction.elementInteraction import ElementInteraction
 from SeleniumLibraryExtends.FindElements.findElements import FindElements
+from SeleniumLibraryExtends.listener import Listener
 
 class SeleniumLibraryExtends(
     Navigation,
     ElementInteraction,
     FindElements
 ):
+    ROBOT_LIBRARY_LISTENER = Listener()
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = VERSION
 

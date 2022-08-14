@@ -108,6 +108,7 @@ test/results/
 
 # Robot Framework
 results/
+report.json
 
 # NPM
 node_modules/
