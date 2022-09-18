@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 import base64
+import requests
 import json
+import os
 
 class Listener():
     ROBOT_LISTENER_API_VERSION = 2
@@ -56,3 +59,16 @@ class Listener():
         self.send_message("close")
         with open("report.json", "w") as write_file:
             json.dump(self.report, write_file, indent=4)
+        load_dotenv('.env')
+        if len(os.environ.get('HUSKY_URL'))>0:
+            with open("report.json", "r") as json_data:
+                data = json.load(json_data)
+            print(data)
+            r = requests.post("{}/{}".format(os.environ.get('HUSKY_URL'), os.environ.get('HUSKY_APP_ID')),
+                json=data,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": "{} {}".format("Bearer", os.environ.get('HUSKY_TOKEN')),
+                }
+            )
+            print(r.json())
